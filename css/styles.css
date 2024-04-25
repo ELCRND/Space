@@ -288,6 +288,11 @@ a {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+}
 
 .earth__ball,
 .moon__ball,
@@ -562,6 +567,11 @@ a {
     margin-top: 280px;
   }
 }
+@media screen and (max-width: 768px) {
+  .team {
+    height: auto;
+  }
+}
 .team .team__title {
   font-size: 60px;
   line-height: 120%;
@@ -715,6 +725,11 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    height: auto;
+  }
 }
 @media screen and (max-width: 1300px) {
   .gallery {
