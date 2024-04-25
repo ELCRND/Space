@@ -196,6 +196,11 @@ a {
   padding-bottom: 100px;
   position: relative;
 }
+@media screen and (max-width: 440px) {
+  .footer {
+    padding-bottom: 0;
+  }
+}
 .footer .footer__content {
   display: grid;
   grid-template-rows: auto auto;
@@ -272,7 +277,8 @@ a {
 }
 @media screen and (max-width: 440px) {
   .astronaut {
-    left: 55%;
+    left: 30%;
+    scale: 0.7;
   }
 }
 
@@ -477,6 +483,7 @@ a {
 @media screen and (max-width: 768px) {
   .hero__statistics {
     flex-direction: column;
+    margin-bottom: 280px;
   }
 }
 .hero__statistics .statistics__item {
@@ -707,6 +714,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 1300px) {
   .gallery {

@@ -2,6 +2,9 @@
   margin-top: 400px;
   padding-bottom: 100px;
   position: relative;
+  @media screen and (max-width: 440px) {
+    padding-bottom: 0;
+  }
   .footer__content {
     display: grid;
     grid-template-rows: auto auto;
@@ -86,6 +89,7 @@
   transform: translateX(-50%);
   z-index: -2;
   @media screen and (max-width: 440px) {
-    left: 55%;
+    left: 30%;
+    scale: 0.7;
   }
 }
