@@ -1,0 +1,141 @@
+.team {
+  height: 100vh;
+  overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    margin-top: 280px;
+  }
+  .team__title {
+    font-size: 60px;
+    line-height: 120%;
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+  }
+  .team__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team__desc {
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 160%;
+      color: $text-color;
+      z-index: 100;
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+      p {
+        padding-left: 40px;
+        border-left: 6px solid rgba(0, 219, 255, 0.5);
+        z-index: 100;
+      }
+    }
+    .team__img {
+      max-width: 480px;
+      max-height: 320px;
+      margin-top: 40px;
+      @media screen and (max-width: 768px) {
+        max-width: 300px;
+        max-height: 220px;
+      }
+    }
+    .team__planet {
+      position: relative;
+      grid-column: 2 / 3;
+      justify-self: center;
+      z-index: 2;
+
+      @media screen and (max-width: 1200px) {
+        width: 250px;
+      }
+
+      .rock {
+        z-index: 0;
+        position: absolute;
+        @media screen and (max-width: 1208px) {
+          scale: 0.7;
+        }
+        @media screen and (max-width: 768px) {
+          scale: 0.5;
+        }
+      }
+      .rock__1 {
+        left: -35%;
+      }
+      .rock__2 {
+        top: 40%;
+        left: -45%;
+      }
+      .rock__3 {
+        top: 70%;
+        left: -2%;
+      }
+      .rock__4 {
+        top: 78%;
+        right: 10%;
+      }
+      .rock__5 {
+        top: 50%;
+        right: -30%;
+      }
+      .rock__6 {
+        top: 0;
+        right: -35%;
+      }
+    }
+  }
+}
+
+.rotate {
+  animation: rock 70s linear infinite, rockMove 220s linear infinite;
+}
+
+.rotate2 {
+  animation: rock 120s linear infinite;
+}
+.rotate3 {
+  animation: rockReverse 80s linear infinite;
+}
+.rotate4 {
+  animation: rock 140s linear infinite;
+}
+.rotate5 {
+  animation: rockReverse 90s linear infinite;
+}
+.rotate6 {
+  animation: rockReverse 20s linear infinite;
+}
+
+@keyframes rockMove {
+  0% {
+    translate: 0;
+    z-index: 0;
+  }
+  100% {
+    translate: -100%;
+  }
+}
+
+@keyframes rock {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rockReverse {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}

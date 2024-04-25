@@ -1,0 +1,112 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .reviews__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 120%;
+    z-index: 2;
+  }
+
+  .reviews__card {
+    display: grid;
+    grid-template-columns: 220px 400px;
+    border-radius: 12px;
+    @media screen and (max-width: 768px) {
+      max-width: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      padding: 20px;
+      background-color: white;
+      color: #525252;
+      .review__title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+      .review__desc {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.review__rocks {
+  z-index: 0;
+  .review__rock {
+    position: absolute;
+    &:nth-child(1) {
+      top: 0%;
+      left: 38%;
+    }
+    &:nth-child(2) {
+      top: 28%;
+      right: 12%;
+    }
+    &:nth-child(3) {
+      top: 95%;
+      left: 10%;
+    }
+    &:nth-child(4) {
+      top: 85%;
+      right: 40%;
+      animation: reviewRockMove 60s infinite linear;
+    }
+    &:nth-child(5) {
+      top: 12%;
+      left: 15%;
+    }
+    &:nth-child(6) {
+      top: 10%;
+      right: 35%;
+    }
+  }
+}
+
+@keyframes reviewRockMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.swiper-wrap {
+  max-width: 1440px;
+  overflow: hidden;
+}
+.swiper {
+  padding: 40px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: 120px !important;
+  left: 14px !important;
+  z-index: 1000;
+  @media screen and (max-width: 768px) {
+    left: 0 !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.37);
+}
+.swiper-pagination-bullet-active {
+  background: #eee;
+}
