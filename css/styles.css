@@ -488,7 +488,6 @@ a {
 @media screen and (max-width: 768px) {
   .hero__statistics {
     flex-direction: column;
-    margin-bottom: 280px;
   }
 }
 .hero__statistics .statistics__item {
